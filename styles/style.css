@@ -157,6 +157,68 @@ nav button {
     align-items: center;
 }
 
+/* ///////////// CLAIMED SECTION //////////////// */
+.claimed-section {
+    border-radius: 1rem;
+    margin: 5rem 2rem 2rem;
+    display: block;
+    overflow-x: auto;
+    background-color: #e42058;
+    /* width: 100%; */
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .3);
+}
+
+.claimed-section h4 {
+    font-size: 1.5rem;
+    color: white;
+    background-color: #e42058;
+    margin: 0;
+    padding: 1rem;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.claimed-section table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+.claimed-section th {
+    text-align: left;
+    padding: 0.8rem 0.5rem;
+    border-bottom: 1px solid #6c757d;
+}
+
+.claimed-section tbody td {
+    padding: 0.8rem 0.5rem;
+    border-bottom: 1px solid #6c757d;
+}
+
+.wallet-name {
+    font-weight: 600;
+    color: #198754;
+}
+
+.burned {
+    font-weight: 500;
+    color: #dc3545;
+}
+
+.hash {
+    font-family: "Roboto Mono", monospace;
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+.time {
+    color: #198754;
+    font-weight: 500;
+}
+
+
+
+
 
 /* ////////////////////// MEDIA RESPONSIVENESS////////////////////////// */
 
@@ -230,5 +292,13 @@ nav button {
 
     .mobile-nav {
         top: 5rem;
+    }
+
+    /* ///////////// CLAIMED SECTION //////////////// */
+    .claimed-section {
+        margin: 5rem 1rem 2rem;
+    }
+    .claimed-section th {
+        font-size: 1rem;
     }
 }
